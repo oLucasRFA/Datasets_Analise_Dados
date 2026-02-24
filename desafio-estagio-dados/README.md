@@ -2,19 +2,18 @@
 
 ## Feito por: Lucas Ramalho
 
-Conteúdo:
-	Esse repositório contém as seguintes pastas:
-		- Consultas SQL (Pasta contendo consultas SQLs que respondem às questões de SQL)
-		- Script Python (Pasta contendo o script python que transforma o .csv sujo em dois arquivos: .csv limpo e .xlsx limpo)
-		- Dashboard Power BI (Pasta contendo um Dashboard em Power BI que analisa o excel gerado pelo .py dentro da pasta Script Python)
-		- Dicionário de Dados (Pasta contendo uma tabela com dicionário de dados sobre o .csv)
+### Conteúdo:
+	- Consultas SQL (Pasta contendo consultas SQLs que respondem às questões de SQL)
+	- Script Python (Pasta contendo o script python que transforma o .csv sujo em dois arquivos: .csv limpo e .xlsx limpo)
+	- Dashboard Power BI (Pasta contendo um Dashboard em Power BI que analisa o excel gerado pelo .py dentro da pasta Script Python)
+	- Dicionário de Dados (Pasta contendo uma tabela com dicionário de dados sobre o .csv)
 
-Objetivos:
+### Objetivos:
 	- 1. Tratar arquivo CSV que continha histórico de vendas de uma empresa fictícia usando Python + Pandas.
 	- 2. Colocar em um Banco de Dados e realizar 4 consultas pedidas pelo enunciado.
 	- 3. Analisar em BI e gerar relatório com insights.
 
-Desafios:
+### Desafios:
 	- 1. Tratamento de Nulos: Identificar e tratar valores nulos.
 	- 2. Anonimização (LGPD): Mascarar o campo email_cliente (ex: j***@email.com) para garantir a privacidade dos dados.
 	- 3. Padronização de Datas: O campo data_venda possui diversos formatos. Converter todos para o padrão YYYY-MM-DD.
@@ -98,10 +97,12 @@ Desafios:
 		ROUND(AVG(valor_total), 2) as ticket_medio
 	FROM vendas_dadostratados;
 ```
-- 3. Visualização de Dados e Insights:
+3. Visualização de Dados e Insights:
 
 	Utilizando o Power BI gerei um Dashboard que contém a Visão Geral e a tabela de dados tratada para ser exportada.
-	![Dashboard Power BI](desafio-estagio-dados/Dashboard%20Power%20BI/dashboard_vendas.png)
+	
+	![Dashboard Power BI](Dashboard%20Power%20BI/dashboard_vendas.png)
+	
 	Dentro da Visão Geral se observou os seguintes insights:
 
 - 3.1 Estabilidade com Picos Sazonais:
@@ -121,7 +122,7 @@ Desafios:
 	Distribuição saudável com relevância para Acessórios e Móveis.
 	Ter um portfólio diversificado mitiga riscos setoriais, e as categorias menores são oportunidades de crescimento via mix ou reposicionamento.
 
-- 4. (ETAPA EXTRA) Sugestão de melhorias:
+4. (ETAPA EXTRA) Sugestão de melhorias:
 
 - 4.1 Insight 1:
 
@@ -141,5 +142,6 @@ Desafios:
 	Acessórios e Móveis estão dominando, porém deve-se olhar para Eletrônicos e Eletrodomésticos também e criar planos de ação que converta mais
 	clientes. Seja por campanhas de marketing, preço mais atrativo, vantagens para clientes ao comprar um produto ou desconto por troca de produto
 	antigo (estratégia comum com eletrônicos). Tudo isso deve ser acompanhado com um CRM eficaz.
+
 
 
