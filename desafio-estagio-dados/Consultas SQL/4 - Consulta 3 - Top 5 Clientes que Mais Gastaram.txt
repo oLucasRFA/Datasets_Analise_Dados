@@ -1,0 +1,7 @@
+SELECT 
+    cliente,
+    ROUND(SUM(valor_total), 2) as total_gasto
+FROM vendas_dadostratados
+GROUP BY cliente
+ORDER BY total_gasto DESC
+LIMIT 5;

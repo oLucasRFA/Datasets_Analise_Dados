@@ -1,0 +1,7 @@
+SELECT 
+    regiao,
+    SUM(quantidade) as total_produtos
+FROM vendas_dadostratados
+GROUP BY regiao
+ORDER BY total_produtos DESC
+LIMIT 1;

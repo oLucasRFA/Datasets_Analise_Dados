@@ -1,0 +1,6 @@
+SELECT 
+    categoria,
+    ROUND(SUM(valor_total), 2) as faturamento_total
+FROM vendas_dadostratados
+GROUP BY categoria
+ORDER BY faturamento_total DESC;
