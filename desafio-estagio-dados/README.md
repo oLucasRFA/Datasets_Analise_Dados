@@ -4,7 +4,6 @@ Feito por: Lucas Ramalho
 
 Conteúdo:
 	Esse repositório contém as seguintes pastas:
-
 	- Consultas SQL (Pasta contendo consultas SQLs que respondem às questões de SQL)
 	- Script Python (Pasta contendo o script python que transforma o .csv sujo em dois arquivos: .csv limpo e .xlsx limpo)
 	- Dashboard Power BI (Pasta contendo um Dashboard em Power BI que analisa o excel gerado pelo .py dentro da pasta Script Python)
@@ -141,3 +140,4 @@ Desafios:
 	Acessórios e Móveis estão dominando, porém deve-se olhar para Eletrônicos e Eletrodomésticos também e criar planos de ação que converta mais
 	clientes. Seja por campanhas de marketing, preço mais atrativo, vantagens para clientes ao comprar um produto ou desconto por troca de produto
 	antigo (estratégia comum com eletrônicos). Tudo isso deve ser acompanhado com um CRM eficaz.
+
