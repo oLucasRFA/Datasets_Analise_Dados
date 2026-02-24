@@ -1,13 +1,13 @@
-Desafio Técnico: Estágio em Dados
+# Desafio Técnico: Estágio em Dados
 
-Feito por: Lucas Ramalho
+## Feito por: Lucas Ramalho
 
 Conteúdo:
 	Esse repositório contém as seguintes pastas:
-	- Consultas SQL (Pasta contendo consultas SQLs que respondem às questões de SQL)
-	- Script Python (Pasta contendo o script python que transforma o .csv sujo em dois arquivos: .csv limpo e .xlsx limpo)
-	- Dashboard Power BI (Pasta contendo um Dashboard em Power BI que analisa o excel gerado pelo .py dentro da pasta Script Python)
-	- Dicionário de Dados (Pasta contendo uma tabela com dicionário de dados sobre o .csv)
+		- Consultas SQL (Pasta contendo consultas SQLs que respondem às questões de SQL)
+		- Script Python (Pasta contendo o script python que transforma o .csv sujo em dois arquivos: .csv limpo e .xlsx limpo)
+		- Dashboard Power BI (Pasta contendo um Dashboard em Power BI que analisa o excel gerado pelo .py dentro da pasta Script Python)
+		- Dicionário de Dados (Pasta contendo uma tabela com dicionário de dados sobre o .csv)
 
 Objetivos:
 	- 1. Tratar arquivo CSV que continha histórico de vendas de uma empresa fictícia usando Python + Pandas.
@@ -58,22 +58,22 @@ Desafios:
 - 2.1 Criação da Tabela:
 
 	Segue abaixo criação da tabela com devidas chaves, junto com uma linha inserida de exemplo.
-
+```
 	CREATE TABLE vendas_dadostratados (id_venda INTEGER,data_venda DATE,cliente TEXT,email_cliente TEXT,produto TEXT,categoria TEXT,quantidade REAL,preco_unitario REAL,valor_total REAL,regiao TEXT);
 	INSERT INTO vendas_dadostratados ('id_venda','data_venda','cliente','email_cliente','produto','categoria','quantidade','preco_unitario','valor_total','regiao') VALUES 
 	('405','2023-06-10','Luiz Gustavo Cavalcante','n***********y@example.com','Armário','Móveis','8.0','4412.33','35298.64','Centro-Oeste'), 
-
+```
 - 2.2 Consulta 1 - Faturamento Total por Categoria:
-
+```
 	SELECT 
 		categoria,
 		ROUND(SUM(valor_total), 2) as faturamento_total
 	FROM vendas_dadostratados
 	GROUP BY categoria
 	ORDER BY faturamento_total DESC;
-
+```
 - 2.3 Consulta 2 - Região que Mais Vendeu Qtd de Produtos:
-
+```
 	SELECT 
 		regiao,
 		SUM(quantidade) as total_produtos
@@ -81,9 +81,9 @@ Desafios:
 	GROUP BY regiao
 	ORDER BY total_produtos DESC
 	LIMIT 1;
-
+```
 - 2.4 Consulta 3 - Top 5 Clientes que Mais Gastaram:
-
+```
 	SELECT 
 		cliente,
 		ROUND(SUM(valor_total), 2) as total_gasto
@@ -91,16 +91,17 @@ Desafios:
 	GROUP BY cliente
 	ORDER BY total_gasto DESC
 	LIMIT 5;
-
+```
 - 2.5 Consulta 4 - Ticket Médio por Venda:
-
+```
 	SELECT 
 		ROUND(AVG(valor_total), 2) as ticket_medio
 	FROM vendas_dadostratados;
-
+```
 - 3. Visualização de Dados e Insights:
 
 	Utilizando o Power BI gerei um Dashboard que contém a Visão Geral e a tabela de dados tratada para ser exportada.
+	![Dashboard Power BI](desafio-estagio-dados/Dashboard%20Power%20BI/dashboard_vendas.png)
 	Dentro da Visão Geral se observou os seguintes insights:
 
 - 3.1 Estabilidade com Picos Sazonais:
@@ -140,4 +141,5 @@ Desafios:
 	Acessórios e Móveis estão dominando, porém deve-se olhar para Eletrônicos e Eletrodomésticos também e criar planos de ação que converta mais
 	clientes. Seja por campanhas de marketing, preço mais atrativo, vantagens para clientes ao comprar um produto ou desconto por troca de produto
 	antigo (estratégia comum com eletrônicos). Tudo isso deve ser acompanhado com um CRM eficaz.
+
 
